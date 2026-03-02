@@ -4,9 +4,17 @@ using System.Text;
 
 public partial class Recipe
 {
-    public int Name { get; }
+    public string Name { get; }
     public int Servings { get; }
 
-    public string[] Material;
+    private string[] Material;
+    private int Count;
 
+    public Recipe(string name, int servings, int maxMaterial)
+    {
+        Name = name;
+        Servings = servings;
+        Material = new string[maxMaterial];
+        Count = 0;
+    }
 }
